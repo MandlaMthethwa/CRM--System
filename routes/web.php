@@ -17,4 +17,4 @@ Auth::routes();
 
 Route::get('/', [ClientController::class, 'index']);
 Route::get('/clients/create', [ClientController::class,'create'])->name('clients.create');
-Route::post('/products', [ClientController::class,'store'])->name('clients.store');
+Route::post('/clients', [ClientController::class,'store'])->name('clients.store');
