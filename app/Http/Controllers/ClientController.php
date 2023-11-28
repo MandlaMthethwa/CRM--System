@@ -62,4 +62,11 @@ public function update(Request $request, Client $client)
     return redirect('/');
 }
 
+public function destroy(Client $client)
+    {
+        $client->delete();
+
+        return redirect('/');
+    }
+
 }
