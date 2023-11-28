@@ -12,7 +12,6 @@
                                 {{ session('success') }}
                             </div>
                         @endif
-
                         <table class="table">
                             <thead>
                                 <tr>
@@ -36,7 +35,11 @@
                                         <td>{{ $client->status }}</td>
                                         <td>
                                             <a href="{{ route('clients.edit', $client->id) }}" class="btn btn-sm btn-primary">Edit</a>
-                                            
+                                            <form action="{{ route('clients.destroy', $client->id) }}" method="post" style="display: inline-block;">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach
