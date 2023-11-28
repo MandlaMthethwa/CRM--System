@@ -14,6 +14,8 @@ use App\Http\Controllers\ClientController;
 |
 */
 Auth::routes();
+Route::resource('categories', clientController::class);
+
 //index
 Route::get('/', [ClientController::class, 'index']);
 
@@ -26,6 +28,5 @@ Route::get('/clients/{client}/edit', [clientController::class, 'edit'])->name('c
 Route::put('/clients/{client}', [clientController::class, 'update'])->name('clients.update');
 
 
-Route::resource('categories', clientController::class);
 
 
