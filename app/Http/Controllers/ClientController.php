@@ -34,7 +34,7 @@ class ClientController extends Controller
     $clients->status = $validatedData['status'];
 
     $clients->save();
-    return redirect('clients/');
+    return redirect('/');
 }
 public function edit(Client $client)
 {
@@ -58,8 +58,8 @@ public function update(Request $request, Client $client)
     $client->email = $validatedData['email'];
     $client->phone = $validatedData['phone'];
     $client->status = $validatedData['status'];
-
-    return redirect('clients/');
+    $client->save();
+    return redirect('/');
 }
 
 }
