@@ -27,4 +27,4 @@ class ClientController extends Controller
     ]);
 }
 
-
+}
