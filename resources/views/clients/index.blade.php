@@ -35,6 +35,8 @@
                                         <td>{{ $client->phone }}</td>
                                         <td>{{ $client->status }}</td>
                                         <td>
+                                            <a href="{{ route('clients.edit', $client->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                            
                                         </td>
                                     </tr>
                                 @endforeach
