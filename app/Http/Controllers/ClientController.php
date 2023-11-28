@@ -9,8 +9,14 @@ use App\Models\Client;
 
 class ClientController extends Controller
 {
-    public function index(){
-        $clients = Client::all();
+    public function index(Request $request)
+    {
+        $sort = $request->input('sort');
+
+        $clients = Client::when($sort, function ($query) use ($sort) {
+            $query->orderBy($sort, 'asc');
+        })->get();
+
         return view('clients.index', compact('clients'));
     }
     public function create(){

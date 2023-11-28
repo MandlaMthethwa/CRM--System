@@ -12,6 +12,24 @@
                                 {{ session('success') }}
                             </div>
                         @endif
+
+                        <form action="{{ route('clients.index') }}" method="GET">
+                            <div class="form-row">
+                                <div class="col">
+                                    <select name="sort" class="form-control">
+                                        <option value="first_name" {{ request('sort') === 'first_name' ? 'selected' : '' }}>First Name</option>
+                                        <option value="last_name" {{ request('sort') === 'last_name' ? 'selected' : '' }}>Last Name</option>
+                                        <option value="email" {{ request('sort') === 'email' ? 'selected' : '' }}>Email</option>
+                                        <option value="phone" {{ request('sort') === 'phone' ? 'selected' : '' }}>Phone number</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Sort</button>
+                                </div>
+                            </div>
+                        </form>
+
+
                         <table class="table">
                             <thead>
                                 <tr>
