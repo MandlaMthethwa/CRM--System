@@ -13,4 +13,5 @@ class Client extends Model
     public $incremementing = 'false';
     protected $keyType= 'string';
     protected $fillable = ['uuid','id_number','first_name','last_name','email','phone','status'];
+    protected $dates = ['deleted_at'];
 }
