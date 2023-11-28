@@ -25,15 +25,15 @@ class ClientController extends Controller
         'phone' => 'required|string',
         'status' => 'required|string',
     ]);
-    $clients = new client();
-    $clients->id_number = $validatedData['id_number'];
-    $clients->first_name = $validatedData['first_name'];
-    $clients->last_name = $validatedData['last_name'];
-    $clients->email = $validatedData['email'];
-    $clients->phone = $validatedData['phone'];
-    $clients->status = $validatedData['status'];
+    $client = new client();
+    $client->id_number = $validatedData['id_number'];
+    $client->first_name = $validatedData['first_name'];
+    $client->last_name = $validatedData['last_name'];
+    $client->email = $validatedData['email'];
+    $client->phone = $validatedData['phone'];
+    $client->status = $validatedData['status'];
 
-    $clients->save();
+    $client->save();
     return redirect('/');
 }
 public function edit(Client $client)
