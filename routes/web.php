@@ -14,7 +14,7 @@ use App\Http\Controllers\ClientController;
 |
 */
 Auth::routes();
-Route::resource('categories', clientController::class);
+Route::resource('clients', ClientController::class);
 
 //index
 Route::get('/', [ClientController::class, 'index'])->name('clients.index');
