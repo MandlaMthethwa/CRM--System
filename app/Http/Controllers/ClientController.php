@@ -17,7 +17,7 @@ class ClientController extends Controller
         return view('clients.create');
     }
     public function store(Request $request){
-      $request->validate([
+        $validatedData = $request->validate([
         'id_number' => 'required|numeric|unique:clients,id_number|max:9999999999999',
         'first_name' => 'required|string',
         'last_name' => 'required|string',
@@ -25,8 +25,16 @@ class ClientController extends Controller
         'phone' => 'required|string',
         'status' => 'required|string',
     ]);
-    Client::create([$request->all()]);
-    return redirect()->route('clients.index')->with('success','client successfully created');
+    $clients = new client();
+    $clients->id_number = $validatedData['id_number'];
+    $clients->first_name = $validatedData['first_name'];
+    $clients->last_name = $validatedData['last_name'];
+    $clients->email = $validatedData['email'];
+    $clients->phone = $validatedData['phone'];
+    $clients->status = $validatedData['status'];
+
+    $clients->save();
+    return redirect('clients/');
 }
 
 }
