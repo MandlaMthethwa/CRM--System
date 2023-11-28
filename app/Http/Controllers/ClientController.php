@@ -25,6 +25,8 @@ class ClientController extends Controller
         'phone' => 'required|string',
         'status' => 'required|string',
     ]);
+    Client::create([$request->all()]);
+    return redirect()->route('clients.index')->with('success','client successfully created');
 }
 
 }
