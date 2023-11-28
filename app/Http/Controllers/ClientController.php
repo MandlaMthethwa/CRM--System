@@ -18,10 +18,10 @@ class ClientController extends Controller
     }
     public function store(Request $request){
       $request->validate([
-        'id_number' => 'required|numeric|unique:your_table_name,id_number|max:9999999999999',
+        'id_number' => 'required|numeric|unique:clients,id_number|max:9999999999999',
         'first_name' => 'required|string',
         'last_name' => 'required|string',
-        'email' => 'required|email|unique:your_table_name,email',
+        'email' => 'required|email|unique:clients,email',
         'phone' => 'required|string',
         'status' => 'required|string',
     ]);
