@@ -55,18 +55,18 @@
                                         <td>{{ $client->phone }}</td>
                                         <td>{{ $client->status }}</td>
                                         <td>
-                                            <a href="{{ route('clients.edit', ['client' => $client]) }}" class="btn btn-sm btn-primary">Edit</a>
+                                            <a href="{{ route('clients.edit', ['client' => $client]) }}" class="btn btn-sm btn-primary">Update</a>
                                             <form action="{{ route('clients.destroy', ['client' => $client]) }}" method="post" style="display: inline-block;">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</button>
+                                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete {{ $client->first_name }} {{ $client->last_name }}?')">Delete</button>
                                             </form>
                                         </td>
                                     </tr>
                                 @endforeach
                             </tbody>
                         </table>
-                        
+
                     </div>
                 </div>
             </div>
