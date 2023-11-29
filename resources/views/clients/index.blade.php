@@ -23,7 +23,6 @@
                 </form>
                 <br/>
                 <div>
-                    <div class="card-header">Client List</div> <br/>
                     <div class="card-body">
                         @if(session('success'))
                             <div class="alert alert-success" role="alert">
@@ -32,8 +31,9 @@
                         @endif
 
 
-
-                        <table class="table">
+                        <h2>Client List</h2>
+                        <div class="table-wrapper">
+                        <table class="fl-table">
                             <thead>
                                 <tr>
                                     <th>ID Number</th>
@@ -66,6 +66,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        
                     </div>
                 </div>
             </div>
