@@ -33,7 +33,7 @@ h2{
     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
 }
 
-.fl-table {
+.client-table {
     border-radius: 5px;
     font-size: 12px;
     font-weight: normal;
@@ -45,35 +45,35 @@ h2{
     background-color: white;
 }
 
-.fl-table td, .fl-table th {
+.client-table td, .client-table th {
     text-align: center;
     padding: 8px;
 }
 
-.fl-table td {
+.client-table td {
     border-right: 1px solid #f8f8f8;
     font-size: 12px;
 }
 
-.fl-table thead th {
+.client-table thead th {
     color: #ffffff;
     background: #F1BA50;
 }
 
 
-.fl-table thead th:nth-child(odd) {
+.client-table thead th:nth-child(odd) {
     color: #ffffff;
     background: #E1551C;
 }
 
-.fl-table tr:nth-child(even) {
+.client-table tr:nth-child(even) {
     background: #F8F8F8;
 }
 
 /* Responsive */
 
 @media (max-width: 767px) {
-    .fl-table {
+    .client-table {
         display: block;
         width: 100%;
     }
@@ -85,21 +85,21 @@ h2{
         color: white;
         padding: 0 0 10px;
     }
-    .fl-table thead, .fl-table tbody, .fl-table thead th {
+    .client-table thead, .client-table tbody, .client-table thead th {
         display: block;
     }
-    .fl-table thead th:last-child{
+    .client-table thead th:last-child{
         border-bottom: none;
     }
-    .fl-table thead {
+    .client-table thead {
         float: left;
     }
-    .fl-table tbody {
+    .client-table tbody {
         width: auto;
         position: relative;
         overflow-x: auto;
     }
-    .fl-table td, .fl-table th {
+    .client-table td, .client-table th {
         padding: 20px .625em .625em .625em;
         height: 60px;
         vertical-align: middle;
@@ -110,27 +110,27 @@ h2{
         font-size: 13px;
         text-overflow: ellipsis;
     }
-    .fl-table thead th {
+    .client-table thead th {
         text-align: left;
         border-bottom: 1px solid #f7f7f9;
     }
-    .fl-table tbody tr {
+    .client-table tbody tr {
         display: table-cell;
     }
-    .fl-table tbody tr:nth-child(odd) {
+    .client-table tbody tr:nth-child(odd) {
         background: none;
     }
-    .fl-table tr:nth-child(even) {
+    .client-table tr:nth-child(even) {
         background: transparent;
     }
-    .fl-table tr td:nth-child(odd) {
+    .client-table tr td:nth-child(odd) {
         background: #F8F8F8;
         border-right: 1px solid #E6E4E4;
     }
-    .fl-table tr td:nth-child(even) {
+    .client-table tr td:nth-child(even) {
         border-right: 1px solid #E6E4E4;
     }
-    .fl-table tbody td {
+    .client-table tbody td {
         display: block;
         text-align: center;
     }

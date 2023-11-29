@@ -33,7 +33,7 @@
 
                         <h2>Client List</h2>
                         <div class="table-wrapper">
-                        <table class="fl-table">
+                        <table class="client-table">
                             <thead>
                                 <tr>
                                     <th>ID Number</th>
