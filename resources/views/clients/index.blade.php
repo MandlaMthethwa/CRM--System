@@ -13,25 +13,27 @@
                             </div>
                         @endif
 
-
-                        <h2>Client List</h2>
-                        <form action="{{ route('clients.index') }}" method="GET">
-                            <div class="form-row">
-                                <div class="col">
-                                    <select name="sort" class="form-control">
-                                        <option value="" selected>Filter by</option>
-                                        <option value="first_name" {{ request('sort') === 'first_name' ? 'selected' : '' }}>First Name </option>
-                                        <option value="last_name" {{ request('sort') === 'last_name' ? 'selected' : '' }}>Last Name</option>
-                                        <option value="email" {{ request('sort') === 'email' ? 'selected' : '' }}>Email</option>
-                                        <option value="phone" {{ request('sort') === 'phone' ? 'selected' : '' }}>Phone number</option>
-                                    </select>
-                                    
+                            <a class="btn btn-sm btn-primary" href="{{ route('clients.create') }}" >Add Client </a>
+                            <br/><br/>
+                            <form action="{{ route('clients.index') }}" method="GET">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <select name="sort" class="form-control">
+                                            <option value="" selected>Filter by</option>
+                                            <option value="first_name" {{ request('sort') === 'first_name' ? 'selected' : '' }}>First Name </option>
+                                            <option value="last_name" {{ request('sort') === 'last_name' ? 'selected' : '' }}>Last Name</option>
+                                            <option value="email" {{ request('sort') === 'email' ? 'selected' : '' }}>Email</option>
+                                            <option value="phone" {{ request('sort') === 'phone' ? 'selected' : '' }}>Phone number</option>
+                                        </select>
+                                        
+                                    </div>
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-primary">Sort</button>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <button type="submit" class="btn btn-primary">Sort</button>
-                                </div>
-                            </div>
-                        </form>
+                            </form>
+                            <h2>Client List</h2>
+                        
                         <div class="table-wrapper">
                         <table class="client-table">
                             <thead>

@@ -48,7 +48,11 @@
 
                             <div class="form-group">
                                 <label for="status">Status</label>
-                                <textarea name="status" class="form-control" required>{{ $client->status }}</textarea>
+                                <select name="status" class="form-control" required>
+                                    <option value="open" {{ $client->status === 'open' ? 'selected' : '' }}>Open</option>
+                                    <option value="in_process" {{ $client->status === 'in_process' ? 'selected' : '' }}>In Process</option>
+                                    <option value="completed" {{ $client->status === 'completed' ? 'selected' : '' }}>Completed</option>
+                                </select>
                             </div>
 
                             <button type="submit" class="btn btn-primary">Update</button>

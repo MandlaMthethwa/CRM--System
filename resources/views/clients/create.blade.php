@@ -48,7 +48,12 @@
 
                             <div class="form-group">
                                 <label for="status">Status</label>
-                                <textarea name="status" class="form-control" required></textarea>
+                                <select name="status" class="form-control" required>
+                                    <option>-- Select Status --</option>
+                                    <option value="open">Open</option>
+                                    <option value="in_process">In Process</option>
+                                    <option value="completed">Completed</option>
+                                </select>
                             </div>
 
                             <button type="submit" class="btn btn-primary">Create Client</button>
