@@ -50,10 +50,10 @@ public function edit(Client $client)
 public function update(Request $request, Client $client)
 {
     $validatedData = $request->validate([
-        'id_number' => 'required|numeric|unique:your_table_name,id_number,' . $client->id . '|max:9999999999999',
+        'id_number' => 'required|numeric|unique:clients,id_number,' . $client->id . '|max:9999999999999',
         'first_name' => 'required|string',
         'last_name' => 'required|string',
-        'email' => 'required|email|unique:your_table_name,email,' . $client->id,
+        'email' => 'required|email|unique:clients,email,' . $client->id,
         'phone' => 'required|string',
         'status' => 'required|string',
     ]);
