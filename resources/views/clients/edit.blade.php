@@ -47,7 +47,7 @@
                                 <textarea name="status" class="form-control" required>{{ $client->status }}</textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary">Update Client</button>
+                            <button type="submit" class="btn btn-primary">Update</button>
                         </form>
                     </div>
                 </div>
