@@ -10,7 +10,7 @@
                         <div class="col">
                             <select name="sort" class="form-control">
                                 <option value="" selected>Filter by</option>
-                                <option value="first_name" {{ request('sort') === 'first_name' ? 'selected' : '' }}>First Name</option>
+                                <option value="first_name" {{ request('sort') === 'first_name' ? 'selected' : '' }}>First Name </option>
                                 <option value="last_name" {{ request('sort') === 'last_name' ? 'selected' : '' }}>Last Name</option>
                                 <option value="email" {{ request('sort') === 'email' ? 'selected' : '' }}>Email</option>
                                 <option value="phone" {{ request('sort') === 'phone' ? 'selected' : '' }}>Phone number</option>
@@ -55,11 +55,11 @@
                                         <td>{{ $client->phone }}</td>
                                         <td>{{ $client->status }}</td>
                                         <td>
-                                            <a href="{{ route('clients.edit', $client->id) }}" class="btn btn-sm btn-primary">Edit</a>
-                                            <form action="{{ route('clients.destroy', $client->id) }}" method="post" style="display: inline-block;">
+                                            <a href="{{ route('clients.edit', ['client' => $client]) }}" class="btn btn-sm btn-primary">Edit</a>
+                                            <form action="{{ route('clients.destroy', ['client' => $client]) }}" method="post" style="display: inline-block;">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</button>
                                             </form>
                                         </td>
                                     </tr>
