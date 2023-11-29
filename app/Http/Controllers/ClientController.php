@@ -25,6 +25,7 @@ class ClientController extends Controller
     public function store(Request $request){
         $validatedData = $request->validate([
         'id_number' => 'required|numeric|unique:clients,id_number|max:9999999999999',
+        'dob'=>'required|date',
         'first_name' => 'required|string',
         'last_name' => 'required|string',
         'email' => 'required|email|unique:clients,email',
@@ -33,6 +34,7 @@ class ClientController extends Controller
     ]);
     $client = new client();
     $client->id_number = $validatedData['id_number'];
+    $client->dob= $validatedData['dob'];
     $client->first_name = $validatedData['first_name'];
     $client->last_name = $validatedData['last_name'];
     $client->email = $validatedData['email'];
@@ -51,6 +53,7 @@ public function update(Request $request, Client $client)
 {
     $validatedData = $request->validate([
         'id_number' => 'required|numeric|unique:clients,id_number,' . $client->id . '|max:9999999999999',
+        'dob'=>'required|date',
         'first_name' => 'required|string',
         'last_name' => 'required|string',
         'email' => 'required|email|unique:clients,email,' . $client->id,
@@ -59,6 +62,7 @@ public function update(Request $request, Client $client)
     ]);
 
     $client->id_number = $validatedData['id_number'];
+    $client->dob= $validatedData['dob'];
     $client->first_name = $validatedData['first_name'];
     $client->last_name = $validatedData['last_name'];
     $client->email = $validatedData['email'];

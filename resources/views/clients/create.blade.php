@@ -4,8 +4,9 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+                <h2 >Add Client</h2>
                 <div class="card">
-                    <div class="card-header">Add Client</div>
+                    
 
                     <div class="card-body">
                         @if(session('success'))
@@ -21,7 +22,10 @@
                                 <label for="id_number">ID Number</label>
                                 <input type="number" name="id_number" class="form-control" required>
                             </div>
-
+                            <div class="form-group">
+                                <label for="dob">Date of birth</label>
+                                <input type="date" name="dob" class="form-control" required>
+                            </div>
                             <div class="form-group">
                                 <label for="first_name">First Name</label>
                                 <input type="text" name="first_name" class="form-control" required>

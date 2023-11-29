@@ -37,6 +37,7 @@
                             <thead>
                                 <tr>
                                     <th>ID Number</th>
+                                    <th>Date of Birth</th>
                                     <th>First Name</th>
                                     <th>Last Name</th>
                                     <th>Email</th>
@@ -49,6 +50,7 @@
                                 @foreach($clients as $client)
                                     <tr>
                                         <td>{{ $client->id_number }}</td>
+                                        <td>{{ $client->dob }}</td>
                                         <td>{{ $client->first_name }}</td>
                                         <td>{{ $client->last_name }}</td>
                                         <td>{{ $client->email }}</td>

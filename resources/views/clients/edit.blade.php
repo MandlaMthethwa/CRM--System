@@ -3,9 +3,9 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Update Client details</div>
+                <h2 >Update Client Details</h2>
 
+                <div class="card">
                     <div class="card-body">
                         @if(session('success'))
                             <div class="alert alert-success" role="alert">
@@ -20,6 +20,10 @@
                             <div class="form-group">
                                 <label for="id_number">ID Number</label>
                                 <input type="number" name="id_number" class="form-control" value="{{ $client->id_number }}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Date of birth</label>
+                                <input type="date" name="dob" class="form-control" value="{{ $client->dob}}" required>
                             </div>
 
                             <div class="form-group">
