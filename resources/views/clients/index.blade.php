@@ -4,23 +4,6 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-
-                <form action="{{ route('clients.index') }}" method="GET">
-                    <div class="form-row">
-                        <div class="col">
-                            <select name="sort" class="form-control">
-                                <option value="" selected>Filter by</option>
-                                <option value="first_name" {{ request('sort') === 'first_name' ? 'selected' : '' }}>First Name </option>
-                                <option value="last_name" {{ request('sort') === 'last_name' ? 'selected' : '' }}>Last Name</option>
-                                <option value="email" {{ request('sort') === 'email' ? 'selected' : '' }}>Email</option>
-                                <option value="phone" {{ request('sort') === 'phone' ? 'selected' : '' }}>Phone number</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <button type="submit" class="btn btn-primary">Sort</button>
-                        </div>
-                    </div>
-                </form>
                 <br/>
                 <div>
                     <div class="card-body">
@@ -32,6 +15,23 @@
 
 
                         <h2>Client List</h2>
+                        <form action="{{ route('clients.index') }}" method="GET">
+                            <div class="form-row">
+                                <div class="col">
+                                    <select name="sort" class="form-control">
+                                        <option value="" selected>Filter by</option>
+                                        <option value="first_name" {{ request('sort') === 'first_name' ? 'selected' : '' }}>First Name </option>
+                                        <option value="last_name" {{ request('sort') === 'last_name' ? 'selected' : '' }}>Last Name</option>
+                                        <option value="email" {{ request('sort') === 'email' ? 'selected' : '' }}>Email</option>
+                                        <option value="phone" {{ request('sort') === 'phone' ? 'selected' : '' }}>Phone number</option>
+                                    </select>
+                                    
+                                </div>
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Sort</button>
+                                </div>
+                            </div>
+                        </form>
                         <div class="table-wrapper">
                         <table class="client-table">
                             <thead>

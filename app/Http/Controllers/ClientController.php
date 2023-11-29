@@ -24,7 +24,7 @@ class ClientController extends Controller
     }
     public function store(Request $request){
         $validatedData = $request->validate([
-        'id_number' => 'required|numeric|unique:clients,id_number|max:9999999999999',
+        'id_number' => 'required|numeric|digits:13|unique:clients,id_number',
         'dob'=>'required|date',
         'first_name' => 'required|string',
         'last_name' => 'required|string',
@@ -52,7 +52,7 @@ public function edit(Client $client)
 public function update(Request $request, Client $client)
 {
     $validatedData = $request->validate([
-        'id_number' => 'required|numeric|unique:clients,id_number,' . $client->id . '|max:9999999999999',
+        'id_number' => 'required|numeric|digits:13|unique:clients,id_number,' . $client->id ,
         'dob'=>'required|date',
         'first_name' => 'required|string',
         'last_name' => 'required|string',
