@@ -34,7 +34,7 @@
                             </form>
                             <h2>Client List</h2>
                         
-                        <div class="table-wrapper">
+                        <div>
                         <table class="client-table">
                             <thead>
                                 <tr>
@@ -43,7 +43,7 @@
                                     <th>First Name</th>
                                     <th>Last Name</th>
                                     <th>Email</th>
-                                    <th>Phone</th>
+                                    <th>Phone Number</th>
                                     <th>Status</th>
                                     <th>Actions</th>
                                 </tr>
@@ -70,7 +70,9 @@
                                 @endforeach
                             </tbody>
                         </table>
-
+                        <div >
+                            {{ $clients->links() }}
+                        </div>
                     </div>
                 </div>
             </div>

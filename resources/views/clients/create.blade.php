@@ -42,7 +42,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="phone">Phone</label>
+                                <label for="phone">Phone Number</label>
                                 <input type="text" name="phone" class="form-control" required>
                             </div>
 
@@ -51,11 +51,11 @@
                                 <select name="status" class="form-control" required>
                                     <option>-- Select Status --</option>
                                     <option value="open">Open</option>
-                                    <option value="in_process">In Process</option>
+                                    <option value="in process">In Process</option>
                                     <option value="completed">Completed</option>
                                 </select>
                             </div>
-
+                            <br/>
                             <button type="submit" class="btn btn-primary">Create Client</button>
                         </form>
                     </div>

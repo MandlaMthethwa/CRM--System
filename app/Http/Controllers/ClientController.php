@@ -15,7 +15,7 @@ class ClientController extends Controller
 
         $clients = Client::when($sort, function ($query) use ($sort) {
             $query->orderBy($sort, 'asc');
-        })->get();
+        })->paginate(10); 
 
         return view('clients.index', compact('clients'));
     }

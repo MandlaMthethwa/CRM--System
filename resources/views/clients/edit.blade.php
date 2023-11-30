@@ -42,7 +42,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="phone">Phone</label>
+                                <label for="phone">Phone Number</label>
                                 <input type="text" name="phone" class="form-control" value="{{ $client->phone }}" required>
                             </div>
 
@@ -50,11 +50,11 @@
                                 <label for="status">Status</label>
                                 <select name="status" class="form-control" required>
                                     <option value="open" {{ $client->status === 'open' ? 'selected' : '' }}>Open</option>
-                                    <option value="in_process" {{ $client->status === 'in_process' ? 'selected' : '' }}>In Process</option>
+                                    <option value="in process" {{ $client->status === 'in_process' ? 'selected' : '' }}>In Process</option>
                                     <option value="completed" {{ $client->status === 'completed' ? 'selected' : '' }}>Completed</option>
                                 </select>
                             </div>
-
+                            <br/>
                             <button type="submit" class="btn btn-primary">Update</button>
                         </form>
                     </div>
