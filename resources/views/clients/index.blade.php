@@ -70,6 +70,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        <br/>
                         <div >
                             {{ $clients->links() }}
                         </div>
